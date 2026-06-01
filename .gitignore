@@ -1,0 +1,41 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform lock file (commit this if you want reproducible provider versions)
+# .terraform.lock.hcl
+
+# Terraform working directories
+**/.terraform/
+**/.terraform.lock.hcl
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Sensitive variable files — never commit actual secrets
+*.tfvars
+!*.tfvars.example
+
+# Override files (local developer overrides)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# Plan output files
+*.tfplan
+
+# macOS
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
