@@ -11,10 +11,10 @@ Review at **Senior Engineer** level. Enforce the patterns in `copilot-instructio
 ## 🔴 Block — Reject the PR
 
 **Resource naming**
-- A resource `name` (or `Name` tag) is not derived from `local.name_prefix` (`${var.project_name}-${var.environment}`). Ad-hoc names break the consistent naming scheme and make resources hard to identify by environment.
+- Resource `name` not derived from `local.name_prefix` (`${var.project_name}-${var.environment}`). Ad-hoc names break the naming scheme.
 
 **Tagging**
-- A module call in `main.tf` is missing `tags = local.common_tags`. Every module must receive `common_tags` so the `Name` merge works correctly.
+- Module call in `main.tf` missing `tags = local.common_tags`. Every module must receive `common_tags` for the `Name` merge to work.
 - A resource's `tags` block does not use `merge(var.tags, { Name = "..." })`. Flat tag assignment overwrites provider `default_tags` instead of merging with them.
 
 **Sensitive data**
